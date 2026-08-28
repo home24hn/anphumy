@@ -2,8 +2,13 @@ import type { Dictionary } from "@/lib/i18n/types";
 import type { Locale } from "@/types/project";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { CardVisual } from "@/components/ui/CardVisual";
+import { FingerprintIcon } from "@/components/ui/icons";
+import { SOLUTION_IMAGES } from "@/lib/media/service-images";
 import { localePath } from "@/components/layout/locale-links";
 import Link from "next/link";
+
+const FALLBACK_ICONS = [null, null, <FingerprintIcon key="fp" />, null];
 
 export function SolutionsOverview({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const { solutions } = dict.home;
@@ -13,13 +18,20 @@ export function SolutionsOverview({ locale, dict }: { locale: Locale; dict: Dict
       <SectionHeading eyebrow={dict.nav.solutions} title={solutions.title} subtitle={solutions.subtitle} />
 
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {solutions.items.map((item) => (
+        {solutions.items.map((item, i) => (
           <div
             key={item.title}
-            className="rounded-lg border border-brand-border bg-white p-6"
+            className="overflow-hidden rounded-lg border border-brand-border bg-white"
           >
-            <h3 className="text-base font-semibold text-brand-dark">{item.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-brand-muted">{item.description}</p>
+            <CardVisual
+              src={SOLUTION_IMAGES[i] ?? null}
+              alt={item.title}
+              icon={FALLBACK_ICONS[i]}
+            />
+            <div className="p-6">
+              <h3 className="text-base font-semibold text-brand-dark">{item.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-brand-muted">{item.description}</p>
+            </div>
           </div>
         ))}
       </div>
