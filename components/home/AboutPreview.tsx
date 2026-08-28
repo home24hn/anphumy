@@ -8,7 +8,7 @@ export function AboutPreview({ locale, dict }: { locale: Locale; dict: Dictionar
   const { about } = dict.home;
 
   return (
-    <Section tone="light">
+    <Section tone="light" compact>
       <div className="max-w-2xl">
         <h2 className="text-2xl font-semibold tracking-tight text-brand-dark sm:text-3xl">
           {about.title}

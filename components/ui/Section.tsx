@@ -16,18 +16,22 @@ export function Section({
   className,
   id,
   border = false,
+  compact = false,
 }: {
   children: ReactNode;
   tone?: SectionTone;
   className?: string;
   id?: string;
   border?: boolean;
+  /** For short, single-paragraph sections — full 120px padding around little
+   * text reads as a blank gap rather than breathing room. */
+  compact?: boolean;
 }) {
   return (
     <section
       id={id}
       className={cn(
-        "py-[72px] lg:py-[120px]",
+        compact ? "py-12 lg:py-16" : "py-[72px] lg:py-[120px]",
         toneClasses[tone],
         border && "border-t border-brand-border",
         className,
