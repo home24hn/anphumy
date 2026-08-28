@@ -3,12 +3,12 @@ import type { Locale } from "@/types/project";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CardVisual } from "@/components/ui/CardVisual";
-import { FingerprintIcon } from "@/components/ui/icons";
+import { FingerprintIcon, WrenchIcon } from "@/components/ui/icons";
 import { SOLUTION_IMAGES } from "@/lib/media/service-images";
 import { localePath } from "@/components/layout/locale-links";
 import Link from "next/link";
 
-const FALLBACK_ICONS = [null, null, <FingerprintIcon key="fp" />, null];
+const FALLBACK_ICONS = [null, null, <FingerprintIcon key="fp" />, <WrenchIcon key="wr" />];
 
 export function SolutionsOverview({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const { solutions } = dict.home;

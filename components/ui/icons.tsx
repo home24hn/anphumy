@@ -46,3 +46,11 @@ export function GaugeIcon() {
     </svg>
   );
 }
+
+export function WrenchIcon() {
+  return (
+    <svg {...common} aria-hidden="true">
+      <path d="M14.7 6.3a4 4 0 0 0-5.6 4.9L3 17.3V21h3.7l6.1-6.1a4 4 0 0 0 4.9-5.6l-2.8 2.8-2.1-2.1z" />
+    </svg>
+  );
+}

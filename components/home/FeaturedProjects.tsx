@@ -11,6 +11,12 @@ export async function FeaturedProjects({ locale, dict }: { locale: Locale; dict:
   const { featuredProjects } = dict.home;
   const projects = await getFeaturedProjects(6);
 
+  // ARCHITECTURE.md section 9.4 places this section on the homepage, but an
+  // empty placeholder box reads as a blank gap before any project is
+  // published. Skip rendering until there's at least one — it reappears on
+  // its own the moment a project is marked featured + published in /admin.
+  if (projects.length === 0) return null;
+
   return (
     <Section tone="light">
       <div className="flex flex-wrap items-end justify-between gap-6">
@@ -27,17 +33,11 @@ export async function FeaturedProjects({ locale, dict }: { locale: Locale; dict:
         </Link>
       </div>
 
-      {projects.length > 0 ? (
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} locale={locale} />
-          ))}
-        </div>
-      ) : (
-        <p className="mt-10 rounded-lg border border-dashed border-brand-border p-10 text-center text-sm text-brand-muted">
-          {featuredProjects.empty}
-        </p>
-      )}
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} locale={locale} />
+        ))}
+      </div>
     </Section>
   );
 }

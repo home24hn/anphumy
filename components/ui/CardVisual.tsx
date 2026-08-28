@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 
 /**
  * Visual band at the top of a service card: a real photo when we have one,
- * otherwise a tinted panel with a simple icon — keeps every card the same
+ * otherwise a deliberately-styled icon panel — keeps every card the same
  * shape without using a mismatched or misleading stock photo.
  */
 export function CardVisual({
@@ -30,10 +30,19 @@ export function CardVisual({
     <div
       className={cn(
         "flex aspect-[4/3] w-full items-center justify-center",
-        tone === "dark" ? "bg-white/[0.04]" : "bg-brand-light",
+        tone === "dark"
+          ? "bg-[linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.01))]"
+          : "bg-[linear-gradient(135deg,var(--color-brand-light),#eef1f5)]",
       )}
     >
-      <div className={cn(tone === "dark" ? "text-white/25" : "text-brand-accent/30")}>{icon}</div>
+      <div
+        className={cn(
+          "flex h-20 w-20 items-center justify-center rounded-full",
+          tone === "dark" ? "bg-white/[0.06] text-white/70" : "bg-white text-brand-accent shadow-sm",
+        )}
+      >
+        {icon}
+      </div>
     </div>
   );
 }

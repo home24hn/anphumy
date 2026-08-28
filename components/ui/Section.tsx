@@ -7,7 +7,7 @@ type SectionTone = "light" | "muted" | "dark";
 const toneClasses: Record<SectionTone, string> = {
   light: "bg-brand-bg text-brand-dark",
   muted: "bg-brand-light text-brand-dark",
-  dark: "bg-brand-dark text-white",
+  dark: "bg-brand-dark-2 text-white",
 };
 
 export function Section({

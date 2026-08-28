@@ -8,7 +8,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const { hero } = dict.home;
 
   return (
-    <section className="bg-brand-dark text-white">
+    <section className="bg-brand-dark-2 text-white">
       <Container className="py-20 lg:py-28">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-accent">
           {hero.eyebrow}
