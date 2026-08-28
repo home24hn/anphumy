@@ -1,0 +1,49 @@
+import type { Metadata } from "next";
+import { getDictionary } from "@/lib/i18n";
+import { Section } from "@/components/ui/Section";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ProjectFilter } from "@/components/projects/ProjectFilter";
+import { ProjectCard } from "@/components/projects/ProjectCard";
+import { getPublishedProjects } from "@/lib/projects/queries";
+import { PROJECT_FILTERS } from "@/lib/projects/categories";
+
+export const metadata: Metadata = {
+  title: "Công trình",
+  description: "Các công trình APM Tech đã triển khai: camera an ninh, hệ thống mạng, kiểm soát ra vào, bảo trì điện nhẹ và năng lượng.",
+  alternates: { canonical: "/projects", languages: { en: "/en/projects" } },
+};
+
+export default async function ProjectsPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ category?: string }>;
+}) {
+  const dict = getDictionary("vi");
+  const { category } = await searchParams;
+
+  const activeFilter = PROJECT_FILTERS.find((f) => f.key === category) ?? PROJECT_FILTERS[0];
+  const categories = activeFilter.key === "all" ? undefined : activeFilter.categories;
+  const projects = await getPublishedProjects(categories);
+
+  return (
+    <Section tone="light">
+      <SectionHeading title={dict.projectsPage.title} subtitle={dict.projectsPage.subtitle} />
+
+      <div className="mt-8">
+        <ProjectFilter locale="vi" active={activeFilter.key} />
+      </div>
+
+      {projects.length > 0 ? (
+        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} locale="vi" />
+          ))}
+        </div>
+      ) : (
+        <p className="mt-10 rounded-lg border border-dashed border-brand-border p-10 text-center text-sm text-brand-muted">
+          {dict.projectsPage.empty}
+        </p>
+      )}
+    </Section>
+  );
+}

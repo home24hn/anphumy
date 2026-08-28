@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# APM Tech — apmtech.vn / anphumy.vn
 
-## Getting Started
+Website doanh nghiệp cho APM Tech: trang public song ngữ (VI mặc định, EN ở `/en`) và một
+mini admin để quản lý Công trình. Kiến trúc chi tiết: xem [`ARCHITECTURE.md`](./ARCHITECTURE.md)
+(Single Source of Truth — đọc trước khi thay đổi kiến trúc).
 
-First, run the development server:
+## Stack
+
+Next.js (App Router) · TypeScript · Tailwind CSS v4 · Supabase (Postgres + Auth + Storage).
+
+## 1. Cài đặt
+
+```bash
+npm install
+```
+
+## 2. Cấu hình Supabase
+
+1. Tạo project mới tại [supabase.com](https://supabase.com/dashboard).
+2. Vào **SQL Editor**, chạy toàn bộ nội dung file [`supabase/schema.sql`](./supabase/schema.sql).
+   File này tạo bảng `projects` / `project_images`, bật Row Level Security, và tạo bucket
+   Storage `projects` (public read, chỉ admin đã đăng nhập mới ghi được).
+3. Vào **Authentication → Users**, tạo thủ công 1 tài khoản admin (email + password).
+   Không có đăng ký công khai — đây là chủ ý kiến trúc (section 13, 29).
+4. Vào **Project Settings → API**, copy `Project URL` và `anon public` key.
+5. Sao chép `.env.local.example` thành `.env.local` và điền hai giá trị trên:
+
+```bash
+cp .env.local.example .env.local
+```
+
+Không cần `SUPABASE_SERVICE_ROLE_KEY` cho vận hành bình thường — admin dùng phiên đăng nhập
+của chính tài khoản admin (RLS `authenticated` policy), không dùng service role key.
+
+## 3. Chạy dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Trang public: http://localhost:3000
+- Bản tiếng Anh: http://localhost:3000/en
+- Admin: http://localhost:3000/admin/login
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Nếu chưa cấu hình `.env.local`, trang public vẫn chạy được (phần Công trình sẽ hiện trạng thái
+rỗng), còn `/admin` sẽ hiện thông báo hướng dẫn cấu hình thay vì lỗi.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 4. Build production
 
-## Learn More
+```bash
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 5. Việc cần APM Tech quyết định thêm (chưa có trong ARCHITECTURE.md)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Kênh nhận liên hệ**: Form ở `/contact` hiện chỉ validate và ghi log server-side
+  ([`lib/actions/contact.ts`](./lib/actions/contact.ts)) — ARCHITECTURE.md nói rõ V1 không cần
+  lưu database, nhưng chưa chỉ định email/CRM nào sẽ nhận thông tin liên hệ. Cần nối vào một
+  kênh thật (email API, webhook, hoặc một bảng Supabase) trước khi lên production.
+- **Thông tin liên hệ thật**: email/số điện thoại trong Footer và trang Liên hệ hiện là
+  placeholder (`contact@anphumy.vn`, `+84 000 000 000`) — cần thay bằng thông tin thật.
+- **Domain**: đã cấu hình `anphumy.vn` làm domain chính (metadata, sitemap, robots.txt).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Cấu trúc thư mục
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Xem section 33 của `ARCHITECTURE.md`.
