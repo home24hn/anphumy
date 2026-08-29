@@ -21,7 +21,7 @@ export function EnergySection({ locale, dict }: { locale: Locale; dict: Dictiona
         {energy.items.map((item, i) => (
           <div
             key={item.title}
-            className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.03]"
+            className="group overflow-hidden rounded-lg border border-white/10 bg-white/[0.03] transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-accent/40"
           >
             <CardVisual
               src={ENERGY_IMAGES[i] ?? null}

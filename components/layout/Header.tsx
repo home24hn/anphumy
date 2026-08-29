@@ -6,6 +6,7 @@ import { useState } from "react";
 import type { Dictionary } from "@/lib/i18n/types";
 import type { Locale } from "@/types/project";
 import { Container } from "@/components/ui/Container";
+import { cn } from "@/lib/utils";
 import { localePath, switchLocalePath } from "./locale-links";
 
 export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
@@ -25,21 +26,31 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
       <Container className="flex h-16 items-center justify-between">
         <Link
           href={localePath(locale, "/")}
-          className="text-sm font-bold tracking-[0.15em] text-brand-dark"
+          className="flex items-center gap-2 text-sm font-bold tracking-[0.15em] text-brand-dark"
         >
+          <span className="h-2 w-2 rounded-full bg-brand-accent" aria-hidden />
           APM TECH
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={localePath(locale, item.href)}
-              className="text-sm font-medium text-brand-dark/80 transition-colors hover:text-brand-accent"
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const href = localePath(locale, item.href);
+            const isActive = pathname === href;
+            return (
+              <Link
+                key={item.href}
+                href={href}
+                className={cn(
+                  "border-b-2 pb-[3px] text-sm font-medium transition-colors hover:text-brand-accent",
+                  isActive
+                    ? "border-brand-accent text-brand-dark"
+                    : "border-transparent text-brand-dark/70",
+                )}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="hidden items-center gap-3 text-sm font-medium lg:flex">

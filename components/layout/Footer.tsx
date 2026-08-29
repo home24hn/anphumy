@@ -19,28 +19,33 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   ];
 
   return (
-    <footer className="border-t border-white/10 bg-brand-dark text-white">
-      <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="border-t-2 border-brand-accent bg-brand-light text-brand-dark">
+      <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1fr]">
         <div>
-          <p className="text-sm font-bold tracking-[0.15em]">APM TECH</p>
-          <p className="mt-3 max-w-[220px] text-sm text-white/60">{dict.footer.tagline}</p>
+          <p className="flex items-center gap-2 text-sm font-bold tracking-[0.15em] text-brand-dark">
+            <span className="h-2 w-2 rounded-full bg-brand-accent" aria-hidden />
+            APM TECH
+          </p>
+          <p className="mt-3 max-w-[240px] text-sm leading-relaxed text-brand-muted">
+            {dict.footer.tagline}
+          </p>
         </div>
 
         <FooterColumn title={dict.footer.solutionsTitle} links={solutionLinks} locale={locale} />
         <FooterColumn title={dict.footer.companyTitle} links={companyLinks} locale={locale} />
 
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-white/50">
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand-muted">
             {dict.footer.contactTitle}
           </p>
-          <ul className="mt-4 space-y-2 text-sm text-white/70">
+          <ul className="mt-4 space-y-2 text-sm text-brand-dark/80">
             <li>
-              <a href="mailto:contact@anphumy.vn" className="hover:text-white">
+              <a href="mailto:contact@anphumy.vn" className="hover:text-brand-accent">
                 contact@anphumy.vn
               </a>
             </li>
             <li>
-              <a href="tel:+84000000000" className="hover:text-white">
+              <a href="tel:+84000000000" className="hover:text-brand-accent">
                 +84 000 000 000
               </a>
             </li>
@@ -48,8 +53,8 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         </div>
       </Container>
 
-      <div className="border-t border-white/10">
-        <Container className="flex flex-col gap-2 py-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+      <div className="border-t border-brand-border bg-white">
+        <Container className="flex flex-col gap-2 py-6 text-xs text-brand-muted sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} APM Tech. {dict.footer.rights}
           </p>
@@ -70,11 +75,11 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <p className="text-xs font-semibold uppercase tracking-[0.12em] text-white/50">{title}</p>
-      <ul className="mt-4 space-y-2 text-sm text-white/70">
+      <p className="text-xs font-semibold uppercase tracking-[0.12em] text-brand-muted">{title}</p>
+      <ul className="mt-4 space-y-2 text-sm text-brand-dark/80">
         {links.map((link) => (
           <li key={link.href}>
-            <Link href={localePath(locale, link.href)} className="hover:text-white">
+            <Link href={localePath(locale, link.href)} className="hover:text-brand-accent">
               {link.label}
             </Link>
           </li>

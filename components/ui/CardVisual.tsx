@@ -21,7 +21,13 @@ export function CardVisual({
   if (src) {
     return (
       <div className="relative aspect-[4/3] w-full overflow-hidden">
-        <Image src={src} alt={alt} fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-cover" />
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(min-width: 1024px) 25vw, 50vw"
+          className="object-cover transition-transform duration-300 group-hover:scale-[1.04]"
+        />
       </div>
     );
   }

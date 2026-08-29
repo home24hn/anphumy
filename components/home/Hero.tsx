@@ -8,8 +8,23 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const { hero } = dict.home;
 
   return (
-    <section className="bg-brand-dark-2 text-white">
-      <Container className="py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-brand-dark-2 text-white">
+      {/* Subtle tech-grid texture + accent glow — restrained, not a full effect. */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.05]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+        }}
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full bg-brand-accent/25 blur-3xl"
+        aria-hidden
+      />
+
+      <Container className="relative py-20 lg:py-28">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-accent">
           {hero.eyebrow}
         </p>

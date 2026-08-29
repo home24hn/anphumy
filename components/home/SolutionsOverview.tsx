@@ -21,7 +21,7 @@ export function SolutionsOverview({ locale, dict }: { locale: Locale; dict: Dict
         {solutions.items.map((item, i) => (
           <div
             key={item.title}
-            className="overflow-hidden rounded-lg border border-brand-border bg-white"
+            className="group overflow-hidden rounded-lg border border-brand-border bg-white transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-accent/30 hover:shadow-lg hover:shadow-brand-dark/5"
           >
             <CardVisual
               src={SOLUTION_IMAGES[i] ?? null}
