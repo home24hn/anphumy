@@ -179,26 +179,58 @@ export const vi: Dictionary = {
     ],
   },
   energyPage: {
-    title: "APM Energy",
-    subtitle: "Mở rộng năng lực hạ tầng công nghệ sang lĩnh vực năng lượng.",
-    intro:
-      "Bên cạnh hạ tầng công nghệ, APM Tech đang phát triển năng lực trong lĩnh vực năng lượng, bao gồm điện mặt trời, hệ thống lưu trữ năng lượng và quản lý năng lượng.",
+    eyebrow: "APM ENERGY",
+    title: "Từ hạ tầng công nghệ đến giải pháp năng lượng",
+    intro: [
+      "APM Tech đang từng bước mở rộng năng lực từ hạ tầng công nghệ sang lĩnh vực năng lượng, hướng tới các giải pháp giúp doanh nghiệp sử dụng năng lượng hiệu quả hơn, tăng tính chủ động trong vận hành và sẵn sàng cho xu hướng chuyển dịch năng lượng.",
+      "Trọng tâm phát triển của APM Energy gồm điện mặt trời, hệ thống lưu trữ năng lượng bằng pin và các giải pháp giám sát, quản lý năng lượng.",
+    ],
     items: [
       {
         title: "Solar PV",
-        description: "Hệ thống điện mặt trời cho doanh nghiệp và công trình.",
+        heading: "Điện mặt trời cho doanh nghiệp và công trình",
+        description:
+          "Giải pháp điện mặt trời được định hướng theo nhu cầu sử dụng điện thực tế, điều kiện công trình và mục tiêu đầu tư của từng khách hàng.",
+        points: [
+          "Khảo sát hiện trạng và nhu cầu sử dụng điện",
+          "Đánh giá khả năng triển khai hệ thống điện mặt trời",
+          "Đề xuất quy mô và phương án kỹ thuật phù hợp",
+          "Hướng tới tối ưu tỷ lệ tự sử dụng và hiệu quả đầu tư",
+        ],
       },
       {
         title: "BESS",
+        heading: "Hệ thống lưu trữ năng lượng bằng pin",
         description:
-          "Hệ thống lưu trữ năng lượng (Battery Energy Storage System) hỗ trợ vận hành ổn định.",
+          "Battery Energy Storage System (BESS) cho phép lưu trữ điện và chủ động sử dụng năng lượng theo nhu cầu vận hành của doanh nghiệp. APM Tech đang phát triển năng lực để từng bước cung cấp các giải pháp BESS cho những nhu cầu như:",
+        points: [
+          "Lưu trữ và sử dụng nguồn điện từ hệ thống Solar PV",
+          "Hỗ trợ duy trì nguồn điện cho các phụ tải quan trọng",
+          "Quản lý công suất và nhu cầu sử dụng điện theo thời điểm",
+          "Tăng khả năng chủ động và linh hoạt trong vận hành hệ thống năng lượng",
+        ],
       },
       {
         title: "Energy Management",
-        description: "Giải pháp giám sát và quản lý mức tiêu thụ năng lượng.",
+        heading: "Giám sát và quản lý năng lượng",
+        description:
+          "Giải pháp Energy Management hướng tới việc giúp doanh nghiệp hiểu rõ hơn cách năng lượng đang được sử dụng và tạo nền tảng dữ liệu cho các quyết định tối ưu vận hành.",
+        points: [
+          "Theo dõi mức tiêu thụ điện theo thời gian",
+          "Giám sát phụ tải và các nguồn năng lượng trong hệ thống",
+          "Tổng hợp dữ liệu phục vụ phân tích vận hành",
+          "Hỗ trợ đánh giá các cơ hội tiết kiệm và tối ưu năng lượng",
+        ],
       },
     ],
-    note: "APM Tech đang trong giai đoạn phát triển năng lực ở lĩnh vực năng lượng. Thông tin công trình cụ thể sẽ được cập nhật khi có dữ liệu triển khai thực tế.",
+    outlook: {
+      title: "Định hướng phát triển",
+      paragraphs: [
+        "APM Energy hiện đang trong giai đoạn xây dựng và phát triển năng lực kỹ thuật trong lĩnh vực năng lượng.",
+        "Chúng tôi ưu tiên tiếp cận từng bước, dựa trên nhu cầu thực tế của khách hàng, tính khả thi của giải pháp và hiệu quả vận hành lâu dài.",
+        "Các công trình, đối tác công nghệ và năng lực triển khai cụ thể sẽ được cập nhật trên website khi có dữ liệu thực tế.",
+      ],
+    },
   },
   aboutPage: {
     title: "Về APM Tech",

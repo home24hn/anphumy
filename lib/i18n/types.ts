@@ -57,11 +57,11 @@ export interface Dictionary {
     items: { title: string; description: string; points: string[] }[];
   };
   energyPage: {
+    eyebrow: string;
     title: string;
-    subtitle: string;
-    intro: string;
-    items: { title: string; description: string }[];
-    note: string;
+    intro: string[];
+    items: { title: string; heading: string; description: string; points: string[] }[];
+    outlook: { title: string; paragraphs: string[] };
   };
   aboutPage: {
     title: string;

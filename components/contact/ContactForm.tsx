@@ -15,7 +15,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
 
   const needOptions = [
     ...dict.solutionsPage.items.map((i) => i.title),
-    dict.energyPage.title,
+    dict.nav.energy,
     form.needOther,
   ];
 

@@ -175,26 +175,58 @@ export const en: Dictionary = {
     ],
   },
   energyPage: {
-    title: "APM Energy",
-    subtitle: "Expanding technology infrastructure capability into energy.",
-    intro:
-      "Alongside technology infrastructure, APM Tech is building capability in the energy sector, including solar PV, battery energy storage and energy management.",
+    eyebrow: "APM ENERGY",
+    title: "From technology infrastructure to energy solutions",
+    intro: [
+      "APM Tech is gradually expanding its capability from technology infrastructure into the energy sector, working toward solutions that help businesses use energy more efficiently, operate with greater self-sufficiency, and stay ready for the energy transition.",
+      "APM Energy's development is focused on solar power, battery energy storage, and energy monitoring and management solutions.",
+    ],
     items: [
       {
         title: "Solar PV",
-        description: "Solar power systems for businesses and facilities.",
+        heading: "Solar power for businesses and facilities",
+        description:
+          "Solar PV solutions are shaped around actual electricity usage, site conditions, and each customer's investment goals.",
+        points: [
+          "Survey current conditions and electricity usage needs",
+          "Assess feasibility for solar PV deployment",
+          "Propose system scale and suitable technical approach",
+          "Aim to optimize self-consumption ratio and investment efficiency",
+        ],
       },
       {
         title: "BESS",
+        heading: "Battery energy storage systems",
         description:
-          "Battery Energy Storage Systems supporting stable operation.",
+          "A Battery Energy Storage System (BESS) stores electricity and lets a business draw on it proactively according to operating needs. APM Tech is building capability to gradually offer BESS solutions for needs such as:",
+        points: [
+          "Storing and using power generated from a Solar PV system",
+          "Helping maintain power for critical loads",
+          "Managing power capacity and demand by time of use",
+          "Increasing flexibility and self-sufficiency in energy system operation",
+        ],
       },
       {
         title: "Energy Management",
-        description: "Solutions for monitoring and managing energy consumption.",
+        heading: "Energy monitoring and management",
+        description:
+          "Energy Management solutions aim to help businesses better understand how energy is being used and build a data foundation for operational optimization decisions.",
+        points: [
+          "Track electricity consumption over time",
+          "Monitor loads and energy sources across the system",
+          "Consolidate data to support operational analysis",
+          "Help identify savings and optimization opportunities",
+        ],
       },
     ],
-    note: "APM Tech is in the process of building capability in the energy sector. Specific project information will be updated as real deployment data becomes available.",
+    outlook: {
+      title: "Development roadmap",
+      paragraphs: [
+        "APM Energy is currently in the process of building technical capability in the energy sector.",
+        "We prioritize a step-by-step approach, guided by customers' actual needs, solution feasibility, and long-term operating efficiency.",
+        "Specific projects, technology partners, and deployment capabilities will be updated on the website as real data becomes available.",
+      ],
+    },
   },
   aboutPage: {
     title: "About APM Tech",
