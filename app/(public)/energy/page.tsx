@@ -3,7 +3,11 @@ import Image from "next/image";
 import { getDictionary } from "@/lib/i18n";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
-import { ENERGY_HERO_IMAGE, ENERGY_PAGE_IMAGES } from "@/lib/media/energy-images";
+import {
+  ENERGY_HERO_IMAGE,
+  ENERGY_OUTLOOK_IMAGE,
+  ENERGY_PAGE_IMAGES,
+} from "@/lib/media/energy-images";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -89,12 +93,24 @@ export default function EnergyPage() {
 
       {/* Outlook */}
       <Section tone="light" border className="!pt-12 !pb-14 lg:!pt-16 lg:!pb-20">
-        <div className="max-w-2xl border-l-2 border-brand-accent pl-6">
-          <h2 className="text-lg font-semibold text-brand-dark">{energyPage.outlook.title}</h2>
-          <div className="mt-4 space-y-3 text-sm leading-relaxed text-brand-muted">
-            {energyPage.outlook.paragraphs.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
+          <div className="border-l-2 border-brand-accent pl-6">
+            <h2 className="text-lg font-semibold text-brand-dark">{energyPage.outlook.title}</h2>
+            <div className="mt-4 space-y-3 text-sm leading-relaxed text-brand-muted">
+              {energyPage.outlook.paragraphs.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+            <Image
+              src={ENERGY_OUTLOOK_IMAGE}
+              alt=""
+              fill
+              loading="eager"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </Section>

@@ -6,3 +6,6 @@ export const ENERGY_PAGE_IMAGES = [
   "/images/energy/bess.webp",
   "/images/energy/energy-management.webp",
 ];
+
+/** Free-license (Pexels) — no watermark, technical/blueprint theme for the outlook section. */
+export const ENERGY_OUTLOOK_IMAGE = "/images/energy/outlook.jpg";
