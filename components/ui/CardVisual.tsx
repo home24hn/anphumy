@@ -25,6 +25,7 @@ export function CardVisual({
           src={src}
           alt={alt}
           fill
+          loading="eager"
           sizes="(min-width: 1024px) 25vw, 50vw"
           className="object-cover transition-transform duration-300 group-hover:scale-[1.04]"
         />
