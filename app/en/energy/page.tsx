@@ -88,8 +88,8 @@ export default function EnEnergyPage() {
       })}
 
       {/* Outlook */}
-      <Section tone="light" border>
-        <div className="mx-auto max-w-2xl rounded-lg bg-brand-light p-8 text-center">
+      <Section tone="light" border className="!pt-12 !pb-14 lg:!pt-16 lg:!pb-20">
+        <div className="max-w-2xl border-l-2 border-brand-accent pl-6">
           <h2 className="text-lg font-semibold text-brand-dark">{energyPage.outlook.title}</h2>
           <div className="mt-4 space-y-3 text-sm leading-relaxed text-brand-muted">
             {energyPage.outlook.paragraphs.map((p, i) => (
