@@ -3,10 +3,10 @@
  * photos — those live in Supabase and must be real, see section 30).
  */
 export const SOLUTION_IMAGES: (string | null)[] = [
-  "/images/services/security.jpg",
-  "/images/services/network.jpg",
-  "/images/services/access-control.jpg",
-  "/images/services/elv-maintenance.jpg",
+  "/images/services/security.webp",
+  "/images/services/network.webp",
+  "/images/services/access-control.webp",
+  "/images/services/elv-maintenance.webp",
 ];
 
 export const ENERGY_IMAGES: (string | null)[] = [

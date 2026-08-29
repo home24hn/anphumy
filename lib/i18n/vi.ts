@@ -48,22 +48,22 @@ export const vi: Dictionary = {
         {
           title: "Camera & An ninh",
           description:
-            "Thiết kế, thi công hệ thống camera IP, giám sát tập trung, lưu trữ và xem từ xa.",
+            "Thiết kế và thi công hệ thống camera giám sát phù hợp với từng loại công trình, giúp tăng cường an ninh và hỗ trợ quản lý vận hành hiệu quả.",
         },
         {
           title: "Hệ thống mạng",
           description:
-            "Hạ tầng mạng LAN/Wi-Fi cho văn phòng, nhà máy và công trình, đảm bảo kết nối ổn định.",
+            "Thiết kế và triển khai hạ tầng mạng LAN/Wi-Fi ổn định, bảo đảm khả năng kết nối liên tục và sẵn sàng mở rộng theo nhu cầu vận hành.",
         },
         {
           title: "Kiểm soát ra vào",
           description:
-            "Giải pháp kiểm soát ra vào bằng thẻ, vân tay, khuôn mặt cho từng khu vực.",
+            "Thiết kế và triển khai hệ thống kiểm soát ra vào giúp quản lý quyền truy cập theo khu vực, thời gian và đối tượng sử dụng.",
         },
         {
           title: "Hệ thống điện nhẹ",
           description:
-            "Bảo trì định kỳ và xử lý sự cố cho hệ thống điện nhẹ đang vận hành.",
+            "Thiết kế và thi công hệ thống điện nhẹ đồng bộ cho văn phòng, nhà máy, tòa nhà và các công trình dân dụng, thương mại.",
         },
       ],
       cta: "Xem chi tiết giải pháp",
@@ -135,42 +135,45 @@ export const vi: Dictionary = {
       {
         title: "Camera & An ninh",
         description:
-          "Thiết kế và thi công hệ thống camera an ninh cho văn phòng, nhà máy, chung cư và công trình.",
+          "Thiết kế và thi công hệ thống camera giám sát phù hợp với từng loại công trình, giúp tăng cường an ninh và hỗ trợ quản lý vận hành hiệu quả.",
         points: [
-          "Khảo sát hiện trạng và tư vấn giải pháp",
-          "Lắp đặt camera IP, cấu hình NVR",
-          "Giám sát tập trung và lưu trữ dữ liệu",
-          "Cấu hình xem từ xa qua ứng dụng",
+          "Khảo sát hiện trạng và tư vấn phương án triển khai",
+          "Thiết kế vị trí và cấu hình hệ thống camera",
+          "Lắp đặt camera IP, NVR và hạ tầng truyền dẫn",
+          "Thiết lập giám sát tập trung, lưu trữ và xem từ xa",
         ],
       },
       {
         title: "Hệ thống mạng",
-        description: "Hạ tầng mạng LAN/Wi-Fi ổn định cho vận hành liên tục.",
+        description:
+          "Thiết kế và triển khai hạ tầng mạng LAN/Wi-Fi ổn định, bảo đảm khả năng kết nối liên tục và sẵn sàng mở rộng theo nhu cầu vận hành.",
         points: [
-          "Thiết kế hạ tầng mạng theo quy mô công trình",
-          "Thi công hệ thống cáp mạng, tủ rack",
+          "Khảo sát và thiết kế hạ tầng mạng theo quy mô công trình",
+          "Thi công hệ thống cáp mạng, tủ rack và thiết bị kết nối",
           "Triển khai và tối ưu vùng phủ Wi-Fi",
-          "Cấu hình thiết bị mạng, phân vùng bảo mật",
+          "Cấu hình thiết bị mạng, phân vùng và tăng cường bảo mật",
         ],
       },
       {
         title: "Kiểm soát ra vào",
-        description: "Giải pháp kiểm soát ra vào theo từng khu vực và cấp độ truy cập.",
+        description:
+          "Thiết kế và triển khai hệ thống kiểm soát ra vào giúp quản lý quyền truy cập theo khu vực, thời gian và đối tượng sử dụng.",
         points: [
-          "Kiểm soát bằng thẻ, vân tay, khuôn mặt",
-          "Phân quyền truy cập theo khu vực",
-          "Tích hợp với hệ thống camera hiện có",
-          "Ghi nhận lịch sử ra vào",
+          "Kiểm soát bằng thẻ, vân tay hoặc nhận diện khuôn mặt",
+          "Phân quyền truy cập theo khu vực và nhóm người dùng",
+          "Tích hợp khóa cửa, thiết bị kiểm soát và hệ thống camera",
+          "Ghi nhận và tra cứu lịch sử ra vào",
         ],
       },
       {
         title: "Hệ thống điện nhẹ",
-        description: "Bảo trì định kỳ để hệ thống vận hành ổn định lâu dài.",
+        description:
+          "Thiết kế và thi công hệ thống điện nhẹ đồng bộ cho văn phòng, nhà máy, tòa nhà và các công trình dân dụng, thương mại.",
         points: [
-          "Kiểm tra tình trạng hệ thống định kỳ",
-          "Bảo trì phòng ngừa",
-          "Xử lý sự cố phát sinh",
-          "Gói bảo trì theo năm",
+          "Khảo sát hiện trạng và xây dựng phương án kỹ thuật",
+          "Thiết kế hệ thống phù hợp với quy mô và nhu cầu vận hành",
+          "Thi công hạ tầng cáp, tủ thiết bị và các hạng mục điện nhẹ",
+          "Tích hợp camera, mạng, kiểm soát ra vào và các hệ thống liên quan",
         ],
       },
     ],
