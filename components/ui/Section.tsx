@@ -2,12 +2,16 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { Container } from "./Container";
 
-type SectionTone = "light" | "muted" | "dark";
+type SectionTone = "light" | "muted" | "dark" | "accent";
 
 const toneClasses: Record<SectionTone, string> = {
   light: "bg-brand-bg text-brand-dark",
   muted: "bg-brand-light text-brand-dark",
   dark: "bg-brand-dark-2 text-white",
+  // Distinguishes Energy as its own pillar (section 3) without going dark —
+  // a light, cool-toned wash instead of a flat white/gray section.
+  accent:
+    "bg-[linear-gradient(180deg,#eef4ff,#f7fafd)] text-brand-dark",
 };
 
 export function Section({

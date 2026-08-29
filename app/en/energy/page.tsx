@@ -16,14 +16,9 @@ export default function EnEnergyPage() {
 
   return (
     <>
-      <Section tone="dark" className="!pb-14 lg:!pb-16">
-        <SectionHeading
-          eyebrow="APM ENERGY"
-          title={energyPage.title}
-          subtitle={energyPage.subtitle}
-          tone="dark"
-        />
-        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-white/70">{energyPage.intro}</p>
+      <Section tone="accent" className="!pb-14 lg:!pb-16">
+        <SectionHeading eyebrow="APM ENERGY" title={energyPage.title} subtitle={energyPage.subtitle} />
+        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-brand-muted">{energyPage.intro}</p>
       </Section>
 
       <Section tone="light">
