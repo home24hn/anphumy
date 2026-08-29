@@ -14,7 +14,7 @@ export function SolutionsOverview({ locale, dict }: { locale: Locale; dict: Dict
   const { solutions } = dict.home;
 
   return (
-    <Section tone="muted">
+    <Section tone="muted" className="!pb-12 lg:!pb-16">
       <SectionHeading eyebrow={dict.nav.solutions} title={solutions.title} subtitle={solutions.subtitle} />
 
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
