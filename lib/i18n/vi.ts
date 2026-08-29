@@ -61,7 +61,7 @@ export const vi: Dictionary = {
             "Giải pháp kiểm soát ra vào bằng thẻ, vân tay, khuôn mặt cho từng khu vực.",
         },
         {
-          title: "Bảo trì điện nhẹ",
+          title: "Hệ thống điện nhẹ",
           description:
             "Bảo trì định kỳ và xử lý sự cố cho hệ thống điện nhẹ đang vận hành.",
         },
@@ -164,7 +164,7 @@ export const vi: Dictionary = {
         ],
       },
       {
-        title: "Bảo trì điện nhẹ",
+        title: "Hệ thống điện nhẹ",
         description: "Bảo trì định kỳ để hệ thống vận hành ổn định lâu dài.",
         points: [
           "Kiểm tra tình trạng hệ thống định kỳ",

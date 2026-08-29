@@ -10,17 +10,19 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
   return (
     <section className="relative overflow-hidden border-b border-brand-border bg-brand-bg text-brand-dark">
-      {/* Tech background photo — heavily blurred and washed with white so it
-       * reads as texture/depth, not a dark image. Keeps the section bright. */}
+      {/* Tech background photo — a white gradient washes the left (where the
+       * text sits) to full opacity so copy stays sharp, and fades out toward
+       * the right so the scene (camera, rack, solar, BESS) stays visible. */}
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <Image
-          src="/images/hero/circuit-bg.jpg"
+          src="/images/hero/tech-services.webp"
           alt=""
           fill
           priority
-          className="scale-110 object-cover opacity-[0.3] blur-[2px]"
+          sizes="100vw"
+          className="object-cover object-right"
         />
-        <div className="absolute inset-0 bg-[linear-gradient(115deg,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.68)_35%,rgba(255,255,255,0.88)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.97)_0%,rgba(255,255,255,0.94)_30%,rgba(255,255,255,0.55)_58%,rgba(255,255,255,0.22)_100%)]" />
       </div>
       <div
         className="pointer-events-none absolute -right-32 -top-32 h-[420px] w-[420px] rounded-full bg-brand-accent/15 blur-3xl"

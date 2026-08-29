@@ -6,7 +6,7 @@ export function MaintenanceSection({ dict }: { dict: Dictionary }) {
   const { maintenance } = dict.home;
 
   return (
-    <Section tone="muted">
+    <Section tone="muted" className="!pb-12 lg:!pb-16">
       <SectionHeading title={maintenance.title} subtitle={maintenance.subtitle} />
       <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-brand-border bg-brand-border sm:grid-cols-2 lg:grid-cols-4">
         {maintenance.items.map((item) => (
