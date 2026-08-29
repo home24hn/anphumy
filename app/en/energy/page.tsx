@@ -44,7 +44,11 @@ export default function EnEnergyPage() {
       {energyPage.items.map((item, i) => {
         const imageRight = i % 2 === 0;
         return (
-          <Section key={item.title} tone={i % 2 === 0 ? "light" : "muted"}>
+          <Section
+            key={item.title}
+            tone={i % 2 === 0 ? "light" : "muted"}
+            className="!py-12 lg:!py-16"
+          >
             <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
               <div
                 className={cn(
