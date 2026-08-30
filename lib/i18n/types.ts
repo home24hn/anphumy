@@ -74,21 +74,31 @@ export interface Dictionary {
   contactPage: {
     title: string;
     subtitle: string;
+    intro: string;
+    formTitle: string;
     form: {
       name: string;
+      namePlaceholder: string;
       company: string;
+      companyPlaceholder: string;
       phone: string;
+      phonePlaceholder: string;
       email: string;
+      emailPlaceholder: string;
       need: string;
       needPlaceholder: string;
-      needOther: string;
+      needOptions: string[];
       message: string;
+      messagePlaceholder: string;
       submit: string;
       submitting: string;
       success: string;
       error: string;
     };
     infoTitle: string;
+    companyLegalName: string;
+    brandLine: string;
+    websiteLabel: string;
   };
   projectsPage: {
     title: string;

@@ -13,12 +13,6 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
   const [state, formAction, pending] = useActionState(submitContactForm, initialState);
   const { form } = dict.contactPage;
 
-  const needOptions = [
-    ...dict.solutionsPage.items.map((i) => i.title),
-    dict.nav.energy,
-    form.needOther,
-  ];
-
   if (state.status === "success") {
     return (
       <div
@@ -40,26 +34,52 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2">
-        <Field label={form.name} htmlFor="name">
-          <input id="name" name="name" type="text" required className={inputClasses} />
+        <Field label={form.name} htmlFor="name" required>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            placeholder={form.namePlaceholder}
+            className={inputClasses}
+          />
         </Field>
         <Field label={form.company} htmlFor="company">
-          <input id="company" name="company" type="text" className={inputClasses} />
+          <input
+            id="company"
+            name="company"
+            type="text"
+            placeholder={form.companyPlaceholder}
+            className={inputClasses}
+          />
         </Field>
-        <Field label={form.phone} htmlFor="phone">
-          <input id="phone" name="phone" type="tel" className={inputClasses} />
+        <Field label={form.phone} htmlFor="phone" required>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            required
+            placeholder={form.phonePlaceholder}
+            className={inputClasses}
+          />
         </Field>
         <Field label={form.email} htmlFor="email">
-          <input id="email" name="email" type="email" className={inputClasses} />
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder={form.emailPlaceholder}
+            className={inputClasses}
+          />
         </Field>
       </div>
 
-      <Field label={form.need} htmlFor="need">
-        <select id="need" name="need" defaultValue="" className={inputClasses}>
+      <Field label={form.need} htmlFor="need" required>
+        <select id="need" name="need" required defaultValue="" className={inputClasses}>
           <option value="" disabled>
             {form.needPlaceholder}
           </option>
-          {needOptions.map((option) => (
+          {form.needOptions.map((option) => (
             <option key={option} value={option}>
               {option}
             </option>
@@ -67,8 +87,15 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
         </select>
       </Field>
 
-      <Field label={form.message} htmlFor="message">
-        <textarea id="message" name="message" rows={5} required className={inputClasses} />
+      <Field label={form.message} htmlFor="message" required>
+        <textarea
+          id="message"
+          name="message"
+          rows={5}
+          required
+          placeholder={form.messagePlaceholder}
+          className={inputClasses}
+        />
       </Field>
 
       {state.status === "error" ? (
@@ -91,16 +118,19 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
 function Field({
   label,
   htmlFor,
+  required,
   children,
 }: {
   label: string;
   htmlFor: string;
+  required?: boolean;
   children: React.ReactNode;
 }) {
   return (
     <div>
       <label htmlFor={htmlFor} className="mb-1.5 block text-sm font-medium text-brand-dark">
         {label}
+        {required ? <span className="text-brand-accent"> *</span> : null}
       </label>
       {children}
     </div>

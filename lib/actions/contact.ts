@@ -9,15 +9,17 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const MESSAGES = {
   vi: {
-    name: "Vui lòng nhập họ tên.",
-    contact: "Vui lòng nhập số điện thoại hoặc email.",
+    name: "Vui lòng nhập họ và tên.",
+    phone: "Vui lòng nhập số điện thoại.",
     email: "Email không hợp lệ.",
+    need: "Vui lòng chọn lĩnh vực cần trao đổi.",
     message: "Vui lòng mô tả ngắn gọn nhu cầu của bạn.",
   },
   en: {
-    name: "Please enter your name.",
-    contact: "Please enter a phone number or email.",
+    name: "Please enter your full name.",
+    phone: "Please enter your phone number.",
     email: "Invalid email address.",
+    need: "Please select an area to discuss.",
     message: "Please briefly describe your need.",
   },
 };
@@ -54,11 +56,14 @@ export async function submitContactForm(
   if (!name || name.length < 2) {
     return { status: "error", message: t.name };
   }
-  if (!phone && !email) {
-    return { status: "error", message: t.contact };
+  if (!phone || phone.length < 6) {
+    return { status: "error", message: t.phone };
   }
   if (email && !EMAIL_RE.test(email)) {
     return { status: "error", message: t.email };
+  }
+  if (!need) {
+    return { status: "error", message: t.need };
   }
   if (!message || message.length < 5) {
     return { status: "error", message: t.message };

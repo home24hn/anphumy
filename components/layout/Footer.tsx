@@ -45,8 +45,8 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               </a>
             </li>
             <li>
-              <a href="tel:+84000000000" className="hover:text-brand-accent">
-                +84 000 000 000
+              <a href="tel:+84901652555" className="hover:text-brand-accent">
+                +84 901 652 555
               </a>
             </li>
           </ul>
