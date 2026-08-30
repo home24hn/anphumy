@@ -128,8 +128,11 @@ export const en: Dictionary = {
   },
   solutionsPage: {
     title: "Solutions",
-    subtitle:
-      "APM Tech delivers four core technology infrastructure solutions for businesses and facilities.",
+    intro: [
+      "APM Tech delivers technology infrastructure solutions that support operations, management, and security for businesses and facilities.",
+      "The four core solutions are **Security & CCTV, Network Infrastructure, Access Control, and ELV Systems**. Depending on scale and current conditions, APM Tech handles everything from survey, design, and technical option selection through to installation, configuration, integration, and handover.",
+      "We prioritize solutions that fit real-world needs, operate reliably, are convenient to run, and can scale as usage requirements change.",
+    ],
     items: [
       {
         title: "Security & CCTV",

@@ -3,12 +3,13 @@ import Image from "next/image";
 import { getDictionary } from "@/lib/i18n";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { BoldText } from "@/components/ui/BoldText";
 import { SOLUTION_IMAGES } from "@/lib/media/service-images";
 
 export const metadata: Metadata = {
   title: "Giải pháp",
   description:
-    "APM Tech triển khai bốn nhóm giải pháp hạ tầng công nghệ: Camera & An ninh, Hệ thống mạng, Kiểm soát ra vào, Bảo trì điện nhẹ.",
+    "APM Tech triển khai bốn nhóm giải pháp hạ tầng công nghệ: Camera & An ninh, Hệ thống mạng, Kiểm soát ra vào, Hệ thống điện nhẹ.",
   alternates: { canonical: "/solutions", languages: { en: "/en/solutions" } },
 };
 
@@ -18,7 +19,14 @@ export default function SolutionsPage() {
 
   return (
     <Section tone="light" className="!pb-10 lg:!pb-10">
-      <SectionHeading title={solutionsPage.title} subtitle={solutionsPage.subtitle} />
+      <SectionHeading title={solutionsPage.title} />
+      <div className="mt-5 max-w-2xl space-y-4">
+        {solutionsPage.intro.map((paragraph, i) => (
+          <p key={i} className="text-base leading-relaxed text-brand-muted">
+            <BoldText text={paragraph} />
+          </p>
+        ))}
+      </div>
 
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
         {solutionsPage.items.map((item, i) => (

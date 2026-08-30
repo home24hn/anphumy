@@ -129,8 +129,11 @@ export const vi: Dictionary = {
   },
   solutionsPage: {
     title: "Giải pháp",
-    subtitle:
-      "APM Tech triển khai bốn nhóm giải pháp hạ tầng công nghệ cho doanh nghiệp và công trình.",
+    intro: [
+      "APM Tech triển khai các giải pháp hạ tầng công nghệ phục vụ hoạt động vận hành, quản lý và an ninh cho doanh nghiệp và công trình.",
+      "Bốn nhóm giải pháp trọng tâm gồm **Camera & An ninh, Hệ thống mạng, Kiểm soát ra vào và Hệ thống điện nhẹ**. Tùy theo quy mô và hiện trạng thực tế, APM Tech thực hiện từ khảo sát, thiết kế, lựa chọn phương án kỹ thuật đến thi công, cấu hình, tích hợp và bàn giao hệ thống.",
+      "Chúng tôi ưu tiên các giải pháp phù hợp với nhu cầu thực tế, có tính ổn định cao, thuận tiện trong vận hành và có khả năng mở rộng khi nhu cầu sử dụng thay đổi.",
+    ],
     items: [
       {
         title: "Camera & An ninh",

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -24,12 +25,15 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-border bg-brand-bg/95 backdrop-blur">
       <Container className="flex h-16 items-center justify-between">
-        <Link
-          href={localePath(locale, "/")}
-          className="flex items-center gap-2 text-sm font-bold tracking-[0.15em] text-brand-dark"
-        >
-          <span className="h-2 w-2 rounded-full bg-brand-accent" aria-hidden />
-          APM TECH
+        <Link href={localePath(locale, "/")} className="flex items-center">
+          <Image
+            src="/images/brand/logo.png"
+            alt="APM Tech"
+            width={1668}
+            height={624}
+            priority
+            className="h-7 w-auto"
+          />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

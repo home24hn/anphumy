@@ -53,7 +53,8 @@ export interface Dictionary {
   };
   solutionsPage: {
     title: string;
-    subtitle: string;
+    /** Paragraphs shown under the title. May contain **bold** segments. */
+    intro: string[];
     items: { title: string; description: string; points: string[] }[];
   };
   energyPage: {

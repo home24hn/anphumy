@@ -3,12 +3,13 @@ import Image from "next/image";
 import { getDictionary } from "@/lib/i18n";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { BoldText } from "@/components/ui/BoldText";
 import { SOLUTION_IMAGES } from "@/lib/media/service-images";
 
 export const metadata: Metadata = {
   title: "Solutions",
   description:
-    "APM Tech delivers four core solutions: Security & CCTV, Network Infrastructure, Access Control, ELV Maintenance.",
+    "APM Tech delivers four core solutions: Security & CCTV, Network Infrastructure, Access Control, ELV Systems.",
   alternates: { canonical: "/en/solutions", languages: { vi: "/solutions" } },
 };
 
@@ -18,7 +19,14 @@ export default function EnSolutionsPage() {
 
   return (
     <Section tone="light" className="!pb-10 lg:!pb-10">
-      <SectionHeading title={solutionsPage.title} subtitle={solutionsPage.subtitle} />
+      <SectionHeading title={solutionsPage.title} />
+      <div className="mt-5 max-w-2xl space-y-4">
+        {solutionsPage.intro.map((paragraph, i) => (
+          <p key={i} className="text-base leading-relaxed text-brand-muted">
+            <BoldText text={paragraph} />
+          </p>
+        ))}
+      </div>
 
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
         {solutionsPage.items.map((item, i) => (

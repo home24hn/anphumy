@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Dictionary } from "@/lib/i18n/types";
 import type { Locale } from "@/types/project";
@@ -22,11 +23,14 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     <footer className="border-t-2 border-brand-accent bg-brand-light text-brand-dark">
       <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1fr]">
         <div>
-          <p className="flex items-center gap-2 text-sm font-bold tracking-[0.15em] text-brand-dark">
-            <span className="h-2 w-2 rounded-full bg-brand-accent" aria-hidden />
-            APM TECH
-          </p>
-          <p className="mt-3 max-w-[240px] text-sm leading-relaxed text-brand-muted">
+          <Image
+            src="/images/brand/logo.png"
+            alt="APM Tech"
+            width={1668}
+            height={624}
+            className="h-8 w-auto"
+          />
+          <p className="mt-4 max-w-[240px] text-sm leading-relaxed text-brand-muted">
             {dict.footer.tagline}
           </p>
         </div>
