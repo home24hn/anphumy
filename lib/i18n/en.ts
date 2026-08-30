@@ -43,26 +43,24 @@ export const en: Dictionary = {
     },
     solutions: {
       title: "Solutions",
-      subtitle: "Four core technology infrastructure solutions APM Tech delivers.",
+      subtitle:
+        "Cohesive, safe technology infrastructure fitted to each facility's operating needs.",
       items: [
         {
           title: "Security & CCTV",
-          description:
-            "Design and installation of IP camera systems, centralized monitoring, storage and remote viewing.",
+          description: "Smart surveillance for stronger security and more effective management.",
         },
         {
           title: "Network Infrastructure",
-          description:
-            "LAN/Wi-Fi infrastructure for offices, factories and facilities, built for stable connectivity.",
+          description: "Stable, high-performance LAN/Wi-Fi infrastructure, ready to scale.",
         },
         {
           title: "Access Control",
-          description:
-            "Access control by card, fingerprint or facial recognition for each area.",
+          description: "Flexible access management by user, area, and time.",
         },
         {
-          title: "ELV Maintenance",
-          description: "Scheduled maintenance and troubleshooting for ELV systems in operation.",
+          title: "ELV Systems",
+          description: "Cohesive ELV infrastructure for offices, factories, and buildings.",
         },
       ],
       cta: "See solution details",

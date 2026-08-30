@@ -4,7 +4,7 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CardVisual } from "@/components/ui/CardVisual";
 import { FingerprintIcon, WrenchIcon } from "@/components/ui/icons";
-import { SOLUTION_IMAGES } from "@/lib/media/service-images";
+import { HOME_SOLUTION_IMAGES } from "@/lib/media/service-images";
 import { localePath } from "@/components/layout/locale-links";
 import Link from "next/link";
 
@@ -24,7 +24,7 @@ export function SolutionsOverview({ locale, dict }: { locale: Locale; dict: Dict
             className="group overflow-hidden rounded-lg border border-brand-border bg-white transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-accent/30 hover:shadow-lg hover:shadow-brand-dark/5"
           >
             <CardVisual
-              src={SOLUTION_IMAGES[i] ?? null}
+              src={HOME_SOLUTION_IMAGES[i] ?? null}
               alt={item.title}
               icon={FALLBACK_ICONS[i]}
             />

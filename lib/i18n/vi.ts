@@ -43,27 +43,24 @@ export const vi: Dictionary = {
     },
     solutions: {
       title: "Giải pháp",
-      subtitle: "Bốn nhóm giải pháp hạ tầng công nghệ APM Tech đang triển khai.",
+      subtitle:
+        "Hạ tầng công nghệ đồng bộ, an toàn và phù hợp với nhu cầu vận hành của từng công trình.",
       items: [
         {
           title: "Camera & An ninh",
-          description:
-            "Thiết kế và thi công hệ thống camera giám sát phù hợp với từng loại công trình, giúp tăng cường an ninh và hỗ trợ quản lý vận hành hiệu quả.",
+          description: "Giám sát thông minh, nâng cao an ninh và hiệu quả quản lý.",
         },
         {
           title: "Hệ thống mạng",
-          description:
-            "Thiết kế và triển khai hạ tầng mạng LAN/Wi-Fi ổn định, bảo đảm khả năng kết nối liên tục và sẵn sàng mở rộng theo nhu cầu vận hành.",
+          description: "Hạ tầng LAN/Wi-Fi ổn định, hiệu suất cao và sẵn sàng mở rộng.",
         },
         {
           title: "Kiểm soát ra vào",
-          description:
-            "Thiết kế và triển khai hệ thống kiểm soát ra vào giúp quản lý quyền truy cập theo khu vực, thời gian và đối tượng sử dụng.",
+          description: "Quản lý truy cập linh hoạt theo người dùng, khu vực và thời gian.",
         },
         {
           title: "Hệ thống điện nhẹ",
-          description:
-            "Thiết kế và thi công hệ thống điện nhẹ đồng bộ cho văn phòng, nhà máy, tòa nhà và các công trình dân dụng, thương mại.",
+          description: "Hạ tầng ELV đồng bộ cho văn phòng, nhà máy và tòa nhà.",
         },
       ],
       cta: "Xem chi tiết giải pháp",
