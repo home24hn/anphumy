@@ -14,8 +14,8 @@ export function SolutionsOverview({ locale, dict }: { locale: Locale; dict: Dict
   const { solutions } = dict.home;
 
   return (
-    <Section tone="muted" className="!pb-12 lg:!pb-16">
-      <SectionHeading eyebrow={dict.nav.solutions} title={solutions.title} subtitle={solutions.subtitle} />
+    <Section tone="muted" className="!py-12 lg:!py-16">
+      <SectionHeading title={solutions.title} subtitle={solutions.subtitle} />
 
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {solutions.items.map((item, i) => (

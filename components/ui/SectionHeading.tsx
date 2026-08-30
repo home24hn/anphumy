@@ -36,7 +36,7 @@ export function SectionHeading({
       {subtitle ? (
         <p
           className={cn(
-            "mt-3 text-base",
+            "mt-3 text-base text-balance",
             tone === "dark" ? "text-white/70" : "text-brand-muted",
           )}
         >
