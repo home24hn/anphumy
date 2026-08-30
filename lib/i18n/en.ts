@@ -230,23 +230,35 @@ export const en: Dictionary = {
   },
   aboutPage: {
     title: "About APM Tech",
-    subtitle: "A technical solutions company for technology infrastructure.",
+    subtitle: "Technical solutions for technology infrastructure and energy",
     body: [
-      "APM Tech is a technical solutions company providing technology infrastructure for businesses and facilities — including security cameras, network systems, access control and ELV.",
-      "Alongside its Technology Infrastructure business, APM Tech is expanding into Energy with Solar PV, BESS and Energy Management.",
-      "APM Tech supports customers from survey, design and installation through to maintenance after systems are handed over.",
+      "APM Tech is the operating brand of An Phu My Development Joint Stock Company, focused on providing technical solutions for businesses, buildings, factories and facilities.",
+      "In Technology Infrastructure, APM Tech delivers security camera systems, network infrastructure, access control, ELV, and related maintenance services.",
+      "Alongside its current business lines, An Phu My Development Joint Stock Company is gradually building capability in the Energy sector, with a focus on solar power, battery energy storage systems (BESS), and energy monitoring and management solutions.",
+      "APM Tech aims to support customers throughout the entire deployment process — from site survey, solution consulting, design, installation and system configuration through to testing, handover and post-investment maintenance.",
+      "Our goal is to build systems that fit real-world needs, operate reliably, are easy to manage, and can scale in the future.",
     ],
-    pillarsTitle: "Two business pillars",
+    pillarsTitle: "Two business areas",
     pillars: [
       {
         title: "Technology Infrastructure",
-        description: "Security & CCTV, network, access control, ELV and maintenance.",
+        description: "Technology infrastructure solutions for businesses and facilities:",
+        points: [
+          "Security & CCTV",
+          "LAN/Wi-Fi network systems",
+          "Access control",
+          "ELV systems",
+          "Maintenance and technical support",
+        ],
       },
       {
         title: "Energy",
-        description: "Solar PV, BESS and Energy Management.",
+        description: "Building toward energy solutions for businesses and facilities:",
+        points: ["Solar PV", "Battery Energy Storage System (BESS)", "Energy Management"],
       },
     ],
+    pillarsNote:
+      "Specific capabilities and projects in the Energy sector will be updated as APM Tech's real-world deployment progresses.",
   },
   contactPage: {
     title: "Contact",

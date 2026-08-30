@@ -234,24 +234,36 @@ export const vi: Dictionary = {
   },
   aboutPage: {
     title: "Về APM Tech",
-    subtitle: "Công ty giải pháp kỹ thuật cho hạ tầng công nghệ.",
+    subtitle: "Giải pháp kỹ thuật cho hạ tầng công nghệ và năng lượng",
     body: [
-      "APM Tech là công ty giải pháp kỹ thuật, cung cấp hạ tầng công nghệ cho doanh nghiệp và công trình — bao gồm camera an ninh, hệ thống mạng, kiểm soát ra vào và điện nhẹ.",
-      "Bên cạnh mảng Technology Infrastructure, APM Tech đang mở rộng năng lực sang lĩnh vực Energy với Solar PV, BESS và Energy Management.",
-      "APM Tech đồng hành cùng khách hàng từ khảo sát, thiết kế, thi công đến bảo trì sau khi hệ thống được bàn giao.",
+      "APM Tech là thương hiệu hoạt động của Công ty Cổ phần Phát triển An Phú Mỹ, tập trung cung cấp các giải pháp kỹ thuật cho doanh nghiệp, tòa nhà, nhà máy và công trình.",
+      "Trong lĩnh vực Technology Infrastructure, APM Tech triển khai các hệ thống camera an ninh, hạ tầng mạng, kiểm soát ra vào, điện nhẹ và các dịch vụ bảo trì liên quan.",
+      "Bên cạnh các lĩnh vực đang hoạt động, Công ty Cổ phần Phát triển An Phú Mỹ đang từng bước phát triển năng lực trong lĩnh vực Energy, với định hướng tập trung vào điện mặt trời, hệ thống lưu trữ năng lượng bằng pin (BESS) và các giải pháp giám sát, quản lý năng lượng.",
+      "APM Tech hướng tới việc đồng hành cùng khách hàng trong toàn bộ quá trình triển khai — từ khảo sát hiện trạng, tư vấn giải pháp, thiết kế, thi công, cấu hình hệ thống đến kiểm tra, bàn giao và bảo trì sau đầu tư.",
+      "Mục tiêu của chúng tôi là xây dựng các hệ thống phù hợp với nhu cầu thực tế, vận hành ổn định, dễ quản lý và có khả năng mở rộng trong tương lai.",
     ],
-    pillarsTitle: "Hai mảng hoạt động",
+    pillarsTitle: "Hai lĩnh vực hoạt động",
     pillars: [
       {
         title: "Technology Infrastructure",
-        description:
-          "Camera an ninh, hệ thống mạng, kiểm soát ra vào, điện nhẹ và bảo trì hệ thống.",
+        description: "Giải pháp hạ tầng công nghệ cho doanh nghiệp và công trình:",
+        points: [
+          "Camera & An ninh",
+          "Hệ thống mạng LAN/Wi-Fi",
+          "Kiểm soát ra vào",
+          "Hệ thống điện nhẹ",
+          "Bảo trì và hỗ trợ kỹ thuật",
+        ],
       },
       {
         title: "Energy",
-        description: "Solar PV, BESS và Energy Management.",
+        description:
+          "Định hướng phát triển các giải pháp năng lượng cho doanh nghiệp và công trình:",
+        points: ["Solar PV", "Battery Energy Storage System (BESS)", "Energy Management"],
       },
     ],
+    pillarsNote:
+      "Các năng lực và công trình cụ thể trong lĩnh vực Energy sẽ được cập nhật theo quá trình triển khai thực tế của APM Tech.",
   },
   contactPage: {
     title: "Liên hệ",

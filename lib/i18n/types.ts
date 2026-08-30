@@ -68,7 +68,8 @@ export interface Dictionary {
     subtitle: string;
     body: string[];
     pillarsTitle: string;
-    pillars: { title: string; description: string }[];
+    pillars: { title: string; description: string; points: string[] }[];
+    pillarsNote: string;
   };
   contactPage: {
     title: string;

@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 export const metadata: Metadata = {
   title: "Về APM Tech",
   description:
-    "APM Tech là công ty giải pháp kỹ thuật, cung cấp hạ tầng công nghệ cho doanh nghiệp và công trình.",
+    "APM Tech là thương hiệu hoạt động của Công ty Cổ phần Phát triển An Phú Mỹ, cung cấp giải pháp kỹ thuật cho hạ tầng công nghệ và năng lượng.",
   alternates: { canonical: "/about", languages: { en: "/en/about" } },
 };
 
@@ -35,9 +35,18 @@ export default function AboutPage() {
             <div key={pillar.title} className="rounded-lg border border-brand-border p-6">
               <h2 className="text-base font-semibold text-brand-dark">{pillar.title}</h2>
               <p className="mt-2 text-sm leading-relaxed text-brand-muted">{pillar.description}</p>
+              <ul className="mt-4 space-y-2">
+                {pillar.points.map((point) => (
+                  <li key={point} className="flex gap-2.5 text-sm text-brand-dark/80">
+                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brand-accent" />
+                    {point}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
+        <p className="mt-6 text-sm leading-relaxed text-brand-muted">{aboutPage.pillarsNote}</p>
       </div>
     </Section>
   );
