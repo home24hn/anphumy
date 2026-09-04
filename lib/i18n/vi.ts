@@ -304,6 +304,10 @@ export const vi: Dictionary = {
     companyLegalName: "CÔNG TY CỔ PHẦN PHÁT TRIỂN AN PHÚ MỸ",
     brandLine: "Thương hiệu: APM Tech",
     websiteLabel: "Website",
+    addresses: [
+      { label: "Trụ sở chính", value: "116 Hoàng Quốc Việt, Hà Nội" },
+      { label: "VPGD", value: "Số 2 ngõ 45 Phố Linh Đường, Hoàng Liệt, Hà Nội" },
+    ],
   },
   projectsPage: {
     title: "Công trình APM Tech",

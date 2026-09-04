@@ -37,6 +37,12 @@ export default function ContactPage() {
             <p className="mt-1 text-sm text-brand-muted">{contactPage.brandLine}</p>
           </div>
           <dl className="mt-5 space-y-4 text-sm">
+            {contactPage.addresses.map((address) => (
+              <div key={address.label}>
+                <dt className="text-brand-muted">{address.label}</dt>
+                <dd className="mt-0.5 font-medium text-brand-dark">{address.value}</dd>
+              </div>
+            ))}
             <div>
               <dt className="text-brand-muted">Email</dt>
               <dd className="mt-0.5 font-medium text-brand-dark">

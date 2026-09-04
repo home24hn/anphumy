@@ -100,6 +100,7 @@ export interface Dictionary {
     companyLegalName: string;
     brandLine: string;
     websiteLabel: string;
+    addresses: { label: string; value: string }[];
   };
   projectsPage: {
     title: string;

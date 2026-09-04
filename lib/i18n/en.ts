@@ -300,6 +300,10 @@ export const en: Dictionary = {
     companyLegalName: "AN PHU MY DEVELOPMENT JOINT STOCK COMPANY",
     brandLine: "Brand: APM Tech",
     websiteLabel: "Website",
+    addresses: [
+      { label: "Headquarters", value: "116 Hoang Quoc Viet, Hanoi" },
+      { label: "Transaction Office", value: "No. 2, Alley 45 Linh Duong Street, Hoang Liet, Hanoi" },
+    ],
   },
   projectsPage: {
     title: "APM Tech Projects",
