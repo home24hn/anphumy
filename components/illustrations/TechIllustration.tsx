@@ -4,14 +4,13 @@ import dynamic from "next/dynamic";
 import { useEffect, useState } from "react";
 import { pickScene } from "@/lib/illustrations/scene-picker";
 
-// Dynamic imports: only the one scene actually chosen for this visit is
-// fetched — the other four never hit the client bundle.
+// Photo-based scenes — pending final visual approval before deploy.
 const SCENES = [
-  dynamic(() => import("./scenes/SmartBuildingScene").then((m) => m.SmartBuildingScene)),
-  dynamic(() => import("./scenes/SecurityScene").then((m) => m.SecurityScene)),
-  dynamic(() => import("./scenes/NetworkScene").then((m) => m.NetworkScene)),
-  dynamic(() => import("./scenes/AccessControlScene").then((m) => m.AccessControlScene)),
-  dynamic(() => import("./scenes/ELVScene").then((m) => m.ELVScene)),
+  dynamic(() => import("./scenes/SmartBuildingPhotoScene").then((m) => m.SmartBuildingPhotoScene)),
+  dynamic(() => import("./scenes/SecurityPhotoScene").then((m) => m.SecurityPhotoScene)),
+  dynamic(() => import("./scenes/NetworkPhotoScene").then((m) => m.NetworkPhotoScene)),
+  dynamic(() => import("./scenes/AccessControlPhotoScene").then((m) => m.AccessControlPhotoScene)),
+  dynamic(() => import("./scenes/ELVPhotoScene").then((m) => m.ELVPhotoScene)),
 ];
 
 /**
@@ -40,19 +39,12 @@ export function TechIllustration() {
   const Scene = scene !== null ? SCENES[scene] : null;
 
   return (
-    <div
-      className="relative h-full w-full overflow-hidden rounded-xl bg-[#F5F8FC]"
-      aria-hidden="true"
-    >
+    <div className="relative h-full w-full" aria-hidden="true">
       {Scene ? (
         <div className="illus-fadein h-full w-full">
           <Scene />
         </div>
-      ) : (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="h-2/3 w-2/3 rounded-lg border border-[#94AFCB]/25" />
-        </div>
-      )}
+      ) : null}
     </div>
   );
 }
