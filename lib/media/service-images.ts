@@ -24,11 +24,8 @@ export const HOME_SOLUTION_IMAGES: (string | null)[] = [
   "/images/services/home-elv-maintenance.webp",
 ];
 
-// Third slot (energy-management.png) intentionally left null: it was a
-// generic "futuristic HUD" stock photo that read as AI-generated filler
-// next to the real solar/BESS photos. Falls back to the icon tile instead.
 export const ENERGY_IMAGES: (string | null)[] = [
   "/images/services/solar.jpg",
   "/images/services/bess.jpg",
-  null,
+  "/images/services/energy-management.png",
 ];
