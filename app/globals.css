@@ -37,3 +37,59 @@ body {
   background: var(--color-brand-accent);
   color: #ffffff;
 }
+
+/* Homepage "APM Tech làm gì?" technical illustration — scoped animation
+ * classes only, does not affect anything else on the site. */
+@keyframes illus-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes illus-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes illus-flow {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+.illus-fadein {
+  animation: illus-fade-in 0.5s ease-out both;
+}
+
+.illus-pulse {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: illus-pulse 2.4s ease-in-out infinite;
+}
+
+.illus-flow {
+  stroke-dasharray: 5 7;
+  animation: illus-flow 2.6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .illus-fadein,
+  .illus-pulse,
+  .illus-flow {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
