@@ -84,13 +84,13 @@ export default async function EnProjectDetailPage({
       </Section>
 
       {project.cover_image_url ? (
-        <Container className="!max-w-[1280px]">
-          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg bg-brand-light">
+        <Container>
+          <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl border border-brand-border bg-brand-light shadow-sm">
             <Image
               src={project.cover_image_url}
               alt={title}
               fill
-              sizes="100vw"
+              sizes="(min-width: 1024px) 1120px, 100vw"
               priority
               className="object-cover"
             />
