@@ -6,7 +6,6 @@ import { SolutionsOverview } from "@/components/home/SolutionsOverview";
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
 import { MaintenanceSection } from "@/components/home/MaintenanceSection";
 import { EnergySection } from "@/components/home/EnergySection";
-import { ContactCTA } from "@/components/home/ContactCTA";
 
 export const metadata: Metadata = {
   title: { absolute: "APM Tech — Technology infrastructure for businesses and facilities" },
@@ -26,7 +25,6 @@ export default function EnHomePage() {
       <FeaturedProjects locale="en" dict={dict} />
       <MaintenanceSection dict={dict} />
       <EnergySection locale="en" dict={dict} />
-      <ContactCTA locale="en" dict={dict} />
     </>
   );
 }
