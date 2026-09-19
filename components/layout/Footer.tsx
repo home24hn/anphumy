@@ -21,7 +21,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
   return (
     <footer className="border-t-2 border-brand-accent bg-brand-light text-brand-dark">
-      <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.2fr_1fr_1fr_1fr]">
+      <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.1fr_0.8fr_0.8fr_1.3fr]">
         <div>
           <Image
             src="/images/brand/logo.png"
@@ -43,7 +43,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             {dict.footer.contactTitle}
           </p>
           <ul className="mt-4 space-y-2 text-sm text-brand-dark/80">
-            <li>{dict.footer.legalName}</li>
+            <li className="whitespace-nowrap">{dict.footer.legalName}</li>
             <li>{dict.footer.taxId}</li>
             <li>
               <a href="mailto:contact@anphumy.vn" className="hover:text-brand-accent">
