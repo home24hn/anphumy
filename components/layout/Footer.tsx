@@ -43,6 +43,8 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             {dict.footer.contactTitle}
           </p>
           <ul className="mt-4 space-y-2 text-sm text-brand-dark/80">
+            <li>{dict.footer.legalName}</li>
+            <li>{dict.footer.taxId}</li>
             <li>
               <a href="mailto:contact@anphumy.vn" className="hover:text-brand-accent">
                 contact@anphumy.vn

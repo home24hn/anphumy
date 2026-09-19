@@ -316,6 +316,8 @@ export const en: Dictionary = {
     solutionsTitle: "Solutions",
     companyTitle: "Company",
     contactTitle: "Contact",
+    legalName: "Công ty Cổ phần Phát triển An Phú Mỹ",
+    taxId: "Tax code: 0104842593",
     rights: "All rights reserved by APM Tech.",
   },
 };

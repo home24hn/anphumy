@@ -320,6 +320,8 @@ export const vi: Dictionary = {
     solutionsTitle: "Giải pháp",
     companyTitle: "Công ty",
     contactTitle: "Liên hệ",
+    legalName: "Công ty Cổ phần Phát triển An Phú Mỹ",
+    taxId: "MST: 0104842593",
     rights: "Bản quyền thuộc về APM Tech.",
   },
 };

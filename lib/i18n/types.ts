@@ -113,6 +113,8 @@ export interface Dictionary {
     solutionsTitle: string;
     companyTitle: string;
     contactTitle: string;
+    legalName: string;
+    taxId: string;
     rights: string;
   };
 }
