@@ -19,6 +19,7 @@ export interface Dictionary {
     backToProjects: string;
     scopeOfWork: string;
     overview: string;
+    gallery: string;
   };
   home: {
     hero: {

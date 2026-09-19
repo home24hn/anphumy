@@ -25,7 +25,25 @@ export function validateImageFile(file: File): ImageValidationError | null {
   return null;
 }
 
-/** Resizes to a max dimension and re-encodes as WebP, returning a File ready to upload. */
+function canvasToBlob(canvas: HTMLCanvasElement, type: string, quality: number): Promise<Blob | null> {
+  return new Promise((resolve) => canvas.toBlob((b) => resolve(b), type, quality));
+}
+
+const EXT_BY_TYPE: Record<string, string> = {
+  "image/webp": "webp",
+  "image/jpeg": "jpg",
+  "image/png": "png",
+};
+
+/**
+ * Resizes to a max dimension and re-encodes for upload, returning a File
+ * ready to upload. Prefers WebP, but some browsers silently ignore the
+ * requested MIME type in canvas.toBlob() and fall back to PNG — which is
+ * both mislabeled and, for a lossless format, far larger than intended.
+ * We check the actual blob.type we got back rather than trust the type we
+ * asked for, and fall back to JPEG (universally supported, compresses
+ * photos far better than PNG) instead of accepting an oversized PNG.
+ */
 export async function prepareImageForUpload(
   file: File,
   maxDimension = MAX_DIMENSION,
@@ -41,14 +59,24 @@ export async function prepareImageForUpload(
   const ctx = canvas.getContext("2d");
   if (!ctx) return file;
 
+  // White backdrop first: source may have transparency, and JPEG (a
+  // possible fallback below) has none — avoids transparent areas going
+  // black.
+  ctx.fillStyle = "#ffffff";
+  ctx.fillRect(0, 0, width, height);
   ctx.drawImage(bitmap, 0, 0, width, height);
   bitmap.close();
 
-  const blob: Blob | null = await new Promise((resolve) =>
-    canvas.toBlob((b) => resolve(b), "image/webp", 0.85),
-  );
+  let blob = await canvasToBlob(canvas, "image/webp", 0.85);
+
+  // Browser ignored the requested type (returned PNG instead of WebP) —
+  // re-encode as JPEG rather than ship an oversized lossless PNG.
+  if (blob && blob.type !== "image/webp") {
+    blob = await canvasToBlob(canvas, "image/jpeg", 0.85);
+  }
   if (!blob) return file;
 
-  const newName = file.name.replace(/\.[^.]+$/, "") + ".webp";
-  return new File([blob], newName, { type: "image/webp" });
+  const ext = EXT_BY_TYPE[blob.type] ?? "jpg";
+  const newName = file.name.replace(/\.[^.]+$/, "") + "." + ext;
+  return new File([blob], newName, { type: blob.type });
 }

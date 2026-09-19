@@ -20,6 +20,7 @@ export const en: Dictionary = {
     languageNotice: "English translation is not available yet.",
     backToProjects: "All projects",
     scopeOfWork: "Scope of work",
+    gallery: "Project photos",
     overview: "Overview",
   },
   home: {

@@ -20,6 +20,7 @@ export const vi: Dictionary = {
     languageNotice: "Bản tiếng Anh của nội dung này chưa có sẵn.",
     backToProjects: "Tất cả công trình",
     scopeOfWork: "Nội dung công việc",
+    gallery: "Hình ảnh công trình",
     overview: "Tổng quan",
   },
   home: {

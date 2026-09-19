@@ -129,7 +129,10 @@ export default async function EnProjectDetailPage({
         </div>
 
         {project.project_images && project.project_images.length > 0 ? (
-          <div className="mt-14">
+          <div className="mt-14 border-t border-brand-border pt-10">
+            <h2 className="mb-5 text-xs font-semibold uppercase tracking-[0.12em] text-brand-accent">
+              {dict.common.gallery}
+            </h2>
             <Gallery images={project.project_images} locale="en" />
           </div>
         ) : null}
