@@ -7,7 +7,7 @@ export function MaintenanceSection({ dict }: { dict: Dictionary }) {
   const { maintenance } = dict.home;
 
   return (
-    <Section tone="muted" border className="!pt-12 !pb-12 lg:!pt-16 lg:!pb-16">
+    <Section tone="muted" border className="!pt-12 !pb-8 lg:!pt-16 lg:!pb-10">
       <div className="flex items-center gap-5">
         <div className="hidden h-16 w-16 shrink-0 items-center justify-center rounded-full bg-white shadow-sm sm:flex">
           <Image src="/images/icons/maintenance.png" alt="" width={36} height={36} loading="eager" />

@@ -14,8 +14,8 @@ export function EnergySection({ locale, dict }: { locale: Locale; dict: Dictiona
   const { energy } = dict.home;
 
   return (
-    <Section tone="accent" className="!py-12 lg:!py-16">
-      <SectionHeading eyebrow="APM ENERGY" title={energy.title} subtitle={energy.subtitle} />
+    <Section tone="accent" className="!pt-8 !pb-12 lg:!pt-10 lg:!pb-16">
+      <SectionHeading title={energy.title} subtitle={energy.subtitle} />
 
       <div className="mt-10 grid gap-5 sm:grid-cols-3">
         {energy.items.map((item, i) => (
