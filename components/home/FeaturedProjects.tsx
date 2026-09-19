@@ -20,11 +20,7 @@ export async function FeaturedProjects({ locale, dict }: { locale: Locale; dict:
   return (
     <Section tone="light" className="!py-12 lg:!py-16">
       <div className="flex flex-wrap items-end justify-between gap-6">
-        <SectionHeading
-          eyebrow={dict.nav.projects}
-          title={featuredProjects.title}
-          subtitle={featuredProjects.subtitle}
-        />
+        <SectionHeading title={featuredProjects.title} />
         <Link
           href={localePath(locale, "/projects")}
           className="text-sm font-medium text-brand-accent hover:text-brand-accent-dark"
